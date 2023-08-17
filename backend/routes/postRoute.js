@@ -1,11 +1,16 @@
 // postRoute.js
 
 import express from "express"
-import { addPost, getPost } from "../controllers/postController.js"
+import {
+    getPosts, getPost, addPost, deletePost, patchPost
+} from "../controllers/postController.js"
 
 const router = express.Router()
 
-router.get("/", addPost)
-router.post("/:id", getPost)
+router.get("/:id", getPost)
+router.get("/", getPosts)
+router.post("/", addPost)
+router.delete("/:id", deletePost)
+router.patch("/:id", patchPost)
 
 export default router
