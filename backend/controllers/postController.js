@@ -57,4 +57,17 @@ export const patchPost = async (req, res) => {
     }
 }
 
+export const addComment = async (req, res) => {
+    try {
+        const { id } = req.params
+        const { comment } = req.body
+        const post = await Post.findById(id)
+        post.comments.push(comment)
+        const patchedPost = await Post.findByIdAndUpdate(id, post, { new: true })
+        res.json(patchedPost)
+    } catch (e) {
+        res.json({ message: e.message })
+    }
+}
+
 export default router

@@ -3,7 +3,8 @@
 import mongoose from "mongoose"
 
 const postSchema = mongoose.Schema({
-    content: String
+    content: String,
+    comments: [String]
 })
 
 const Post = mongoose.model("Post", postSchema)
