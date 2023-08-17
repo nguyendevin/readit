@@ -12,6 +12,8 @@ const port = process.env.PORT || 3000
 
 connectToDatabase()
 
+app.use(express.json())
+
 app.use('/posts', postRoute);
 
 app.listen(port, () => {
