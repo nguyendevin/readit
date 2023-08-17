@@ -1,4 +1,4 @@
-// userModel.js
+// postModel.js
 
 import mongoose from "mongoose"
 
