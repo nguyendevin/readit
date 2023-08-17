@@ -1,15 +1,20 @@
 // index.js
 
-require("dotenv").config();
+import express from "express"
+import dotenv from "dotenv"
+import connectToDB from "./mongoose.js";
 
-const express = require('express')
+dotenv.config();
+
 const app = express()
 const port = process.env.PORT || 3000
 
+connectToDB()
+
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send("Hello World!")
 })
 
 app.listen(port, () => {
-    console.log(`Server listening on port ${port}`)
+    console.log(`Server Listening on Port ${port}`)
 })
