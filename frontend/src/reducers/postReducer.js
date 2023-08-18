@@ -11,7 +11,7 @@ const postReducer = (state = [], action) => {
         case "ADD_POST":
             return [...state, action.payload]
         case "DELETE_POST":
-            return state.filter((post) => post._id !== action.payload._id)
+            return state.filter((post) => post._id !== action.payload)
         case "PATCH_POST":
             return state.map((post) => (post._id === action.payload._id ? action.payload : post))
         case "ADD_COMMENT":
