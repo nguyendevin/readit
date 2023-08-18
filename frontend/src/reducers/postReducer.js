@@ -21,4 +21,4 @@ const postReducer = (state = [], action) => {
     }
 }
 
-const reducers = combineReducers({ postReducer })
+export const reducers = combineReducers({ postReducer })
