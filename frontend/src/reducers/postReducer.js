@@ -7,7 +7,7 @@ const postReducer = (state = [], action) => {
         case "GET_POSTS":
             return action.payload
         case "GET_POST":
-            return state.find((post) => post._id === action.payload._id)
+            return action.payload
         case "ADD_POST":
             return [...state, action.payload]
         case "DELETE_POST":
