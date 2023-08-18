@@ -27,5 +27,5 @@ export const patchPost = (id, post) => {
 }
 
 export const addComment = (id, comment) => {
-    api.post(`/posts/${id}/addComment`, { comment })
+    api.post(`/posts/${id}`, { comment })
 }
