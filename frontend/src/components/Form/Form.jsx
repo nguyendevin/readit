@@ -14,8 +14,7 @@ const Form = () => {
     }
 
     const handleSubmit = async (event) => {
-        event.preventFault()
-
+        event.preventDefault()
         dispatch(addPost({ content }))
     }
     
