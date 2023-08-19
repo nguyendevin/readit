@@ -27,7 +27,7 @@ const Form = () => {
                     onChange={handleContentChange}
                 />
                 <button type="submit">
-                    submit
+                    post
                 </button>
             </form>
         </div>
