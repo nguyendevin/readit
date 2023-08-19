@@ -2,6 +2,7 @@
 
 import express from "express"
 import dotenv from "dotenv"
+import cors from "cors"
 import connectToDatabase from "./database/database.js"
 import postRoute from "./routes/postRoute.js"
 
@@ -13,6 +14,7 @@ const port = process.env.PORT || 3000
 connectToDatabase()
 
 app.use(express.json())
+app.use(cors())
 
 app.use('/posts', postRoute);
 
