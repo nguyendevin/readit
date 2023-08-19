@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 
 import Form from "./components/Form/Form"
-import Post from "./components/Post/Post"
+import Posts from "./components/Posts/Posts"
 import { getPosts } from "../../actions/postAction"
 
 const App = () => {
